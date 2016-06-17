@@ -215,7 +215,7 @@ set tm=500
 " switch syntax highlighting on
 syntax on
 
-set encoding=utf8
+" set encoding=utf8
 let base16colorspace=256  " Access colors present in 256 colorspace"
 set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors"
 execute "set background=".$BACKGROUND
@@ -484,10 +484,10 @@ nmap <leader>mq :MarkedQuit<cr>
 " toggle Limelight
 nmap <leader>f :Limelight!!<cr>
 
-let g:neomake_javascript_jshint_maker = {
-    \ 'args': ['--verbose'],
-    \ 'errorformat': '%A%f: line %l\, col %v\, %m \(%t%*\d\)',
-\ }
+" let g:neomake_javascript_jshint_maker = {
+"     \ 'args': ['--verbose'],
+"     \ 'errorformat': '%A%f: line %l\, col %v\, %m \(%t%*\d\)',
+" \ }
 
 let g:neomake_typescript_tsc_maker = {
     \ 'args': ['-m', 'commonjs', '--noEmit' ],
@@ -500,7 +500,7 @@ let g:neomake_typescript_tsc_maker = {
 \ }
 
 " autocmd FileType javascript let g:neomake_javascript_enabled_makers = findfile('.jshintrc', '.;') != '' ? ['jshint'] : ['eslint']
-let g:neomake_javascript_enabled_makers = ['jshint', 'jscs']
+" let g:neomake_javascript_enabled_makers = ['jshint', 'jscs']
 
 " CtrlP ignore patterns
 " let g:ctrlp_custom_ignore = {
