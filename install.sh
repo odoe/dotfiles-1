@@ -4,6 +4,7 @@ echo "Installing dotfiles"
 
 echo "Initializing submodule(s)"
 git submodule update --init --recursive
+source zsh/themes/powerline/install_in_omz.sh
 
 source install/link.sh
 

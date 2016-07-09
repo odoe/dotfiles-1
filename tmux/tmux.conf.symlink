@@ -1,10 +1,11 @@
+run-shell "powerline-daemon -q"
 set -sg escape-time 0
 set -g prefix C-Space
 set -g default-terminal "xterm"
-source "/usr/share/tmux/powerline.conf"
+#source "/usr/share/tmux/powerline.conf"
 #source-file "${HOME}/.tmux/themes/default.tmux"
-#set-option -g default-shell /usr/bin/fish
-#set-option -g default-shell /usr/bin/zsh
+source "/usr/local/lib/python2.7/dist-packages/powerline/bindings/tmux/powerline.conf"
+#set-option -g default-terminal "screen-256color"
 
 # -----------------------------------------------------------------------------
 # Copy & Paste
