@@ -106,7 +106,7 @@ Plug 'morhetz/gruvbox'
 Plug 'vim-scripts/Auto-Pairs'
 Plug 'elixir-lang/vim-elixir'
 Plug 'raichoo/purescript-vim'
-Plug 'lambdatoast/elm.vim'
+Plug 'ElmCast/elm-vim'
 Plug 'rust-lang/rust.vim'
 Plug 'wavded/vim-stylus'
 Plug 'idris-hackers/idris-vim'
@@ -190,6 +190,9 @@ let g:solarized_contrast = "high"
 set background=dark
 
 let g:mustache_abbreviations = 1
+
+" Elm stuff
+let g:elm_format_autosave = 1
 
 " pangloss/vim-javascript
 let g:javascript_conceal_function       = "ƒ"
