@@ -48,7 +48,16 @@ Plug 'othree/yajs.vim', { 'for': 'javascript' } " JavaScript syntax plugin
 Plug 'mxw/vim-jsx', { 'for': 'jsx' } " JSX support
 Plug 'elzr/vim-json', { 'for': 'json' } " JSON support
 Plug 'othree/es.next.syntax.vim', { 'for': 'javascript' } " ES6 and beyond syntax
-Plug 'Shougo/vimproc.vim', { 'do': 'make' } " interactive command execution in vim
+Plug 'Shougo/vimproc.vim', {
+      \   'do': 'make',
+      \   'build' : {
+      \       'windows' : 'tools\\update-dll-mingw',
+      \       'cygwin' : 'make -f make_cygwin.mak',
+      \       'mac' : 'make -f make_mac.mak',
+      \       'linux' : 'make',
+      \       'unix' : 'gmake',
+      \    },
+      \ } " interactive command execution in vim
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' } " typescript support
 Plug 'mustache/vim-mustache-handlebars' " mustach support
 Plug 'digitaltoad/vim-jade', { 'for': ['jade', 'pug'] } " jade support
@@ -110,6 +119,8 @@ Plug 'ElmCast/elm-vim'
 Plug 'rust-lang/rust.vim'
 Plug 'wavded/vim-stylus'
 Plug 'idris-hackers/idris-vim'
+Plug 'ianks/vim-tsx'
+Plug 'Quramy/tsuquyomi'
 " Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " vim-scripts repos
@@ -578,6 +589,9 @@ endfunction
 
 let g:special_blend_run='gulp test'
 let g:syntastic_javascript_checkers = ['']
+" typescript checker
+let g:tsuquyomi_disable_quickfix = 1
+let g:syntastic_typescript_checkers = ['tsuquyomi'] " You shouldn't use 'tsc' checker.
 highlight LineNr ctermfg=grey
 
 " toggle invisible characters
